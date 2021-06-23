@@ -1,0 +1,242 @@
+html {
+  font-family: 'Cormorant Infant', serif;
+  font-size: 14pt;
+  box-sizing: border-box;
+  background: #EDF2FA;
+  margin: 0px;
+}
+
+body {
+  margin: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: url(./res/img/scroll_bar_track.png);
+  background-repeat: repeat-y;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border: 1px solid black;
+}
+
+@media(max-width: 575px) {
+  .large-only {
+    display: none !important;
+  }
+}
+@media(min-width: 576px) {
+  .narrow-only {
+    display: none !important;
+  }
+}
+
+.main-container {
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 1100px) {
+  .main-container {
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* @media (min-width: 1000px) {
+  .main-container {
+    position: relative;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+} */
+
+img {
+  width: 100%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover, a.active {
+  text-shadow: 0 0 0.5pt #0000FF;
+}
+
+/* menu **********************************************/
+
+.menu-btn {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 70px;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 100px 40px;
+  background: #EDF2FA;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+@media (min-width: 576px) {
+  .menu {
+    top: 50px;
+    display: block;
+    height: 70px;
+    padding: 0;
+  }
+  .home-btn, .capture-btn, .about-btn {
+    position: absolute;
+    top: 0px;
+    width: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .home-btn {
+    left: 0px;
+      /*right: 50%;
+      margin-right: 288px; */
+  }
+  .capture-btn, .about-btn {
+      right: 0px;
+      /*left: 50%;
+      margin-left: 288px; */
+  }
+
+  .about-btn {
+    top: 30px;
+  }
+}
+
+.menu > a {
+  font-family: 'Cormorant Infant', serif;
+  font-size: 24pt;
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding-bottom: 24px;
+}
+
+@media (min-width: 576px) {
+  .menu > a {
+    font-size: 14pt;
+  }
+}
+
+.menu > .close {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 70px;
+}
+
+/* footer **********************************************/
+.copyright {
+  position: fixed;
+  width: inherit;
+  box-sizing: border-box;
+  padding-right: 50px;
+  bottom: 30px;
+  text-align: right;
+  /* TODO font */
+}
+
+.legal {
+  position: fixed;
+  box-sizing: border-box;
+  padding-left: 50px;
+  bottom: 30px;
+}
+
+@media (max-width: 576px) {
+  .copyright, .legal {
+    display: none;
+  }
+}
+
+/* aphorism **********************************************/
+
+.aphorism .word {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.aphorism .word:hover {
+  text-shadow: 0 0 0.5pt #0000FF;
+}
+
+
+/* popup **********************************************/
+
+.popup-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  background: #EDF2FACC;
+}
+
+
+.popup {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  right: 16px;
+  bottom: 16px;
+  background: #fdfefe;
+}
+
+.popup > .content {
+  height: calc(100% - 80px);
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 70px;
+  margin-bottom: 10px;
+
+  overflow-y: auto;
+  padding: 0 24px;
+
+  font-family: 'Cormorant Infant', serif;
+  font-size: 14pt;
+
+  scrollbar-width: thin;
+}
+
+
+.popup > .close {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 70px;
+}
+
+@media (min-width: 716px) {
+  .popup > .close {
+    right: 8px;
+    top: 16px;
+  }
+}
+
+.popup a {
+  color: black;
+  text-decoration: none;
+}
